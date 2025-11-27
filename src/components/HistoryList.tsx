@@ -12,7 +12,7 @@ export const HistoryList = () => {
   const myHistory: ItemHistory[] = useSelector((state) => state.myHistory.myHistory);
 
   const handleClick = (imdbID: string) => {
-    navigate(`/movie?i=${imdbID}`);
+    navigate(`/movie/${imdbID}`);
   }
 
   return (

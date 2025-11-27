@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { Logo } from "../assets/logo";
-import { SearchForm } from "./SearchForm";
+import { FormSearch } from "./FormSearch";
+import { AddList } from "@/assets/add-list";
 
 export const Header = () => {
   return (
@@ -16,11 +17,14 @@ export const Header = () => {
           </div>
         </Link>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
           <Link to="/my-list">
-            <span className="text-gray-300 hover:text-white text-sm font-medium transition-colors">My List</span>
+            <div className="flex gap-1 items-center bg-gray-800 hover:bg-slate-800 rounded-md p-2 pr-3 transition-colors">
+              <AddList />
+              <span className="-mt-[1px] text-white text-sm font-medium">My List</span>
+            </div>
           </Link>
-          <SearchForm />
+          <FormSearch />
         </div>
 
       </div>

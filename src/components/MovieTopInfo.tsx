@@ -10,8 +10,8 @@ export const MovieTopInfo = ({data, addedToFav, addRemoveFav}: {
     <div id="movie-top-info" className="w-full flex flex-col gap-6 text-left">
 
       <div className="flex flex-col gap-3">
-        <div className="flex gap-4 items-center">
-          <p className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.033em] text-white">{data.Title}</p>
+        <div className="flex gap-4 justify-between items-center">
+          <p className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-[-0.033em] text-white">{data.Title}</p>
           <div className="cursor-pointer mt-3" onClick={() => addRemoveFav()}>
             <AddList added={addedToFav} size="w-10 h-10" />
           </div>

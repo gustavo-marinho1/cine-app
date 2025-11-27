@@ -1,6 +1,6 @@
 import { LoadingCircle } from "../assets/loading-circle"
 
-export const SearchLoading = () => {
+export const MovieLoading = () => {
   return (
     <div className="h-full w-full flex items-center justify-center text-white">
       <div className="flex flex-col gap-4 items-center">
@@ -9,7 +9,7 @@ export const SearchLoading = () => {
           <LoadingCircle />
         </div>
         
-        <h3 className="text-lg font-medium">Searching</h3>
+        <h3 className="text-lg font-medium">Loading</h3>
 
       </div>
     </div>

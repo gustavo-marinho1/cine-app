@@ -7,6 +7,7 @@ import { Movie } from './pages/Movie';
 import { Footer } from './components/Footer';
 import { Provider } from 'react-redux';
 import store from './lib/store';
+import { MyList } from './pages/MyList';
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
               <div className="w-7xl">
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/search" element={<Searching />} />
-                  <Route path="/movie" element={<Movie />} />
+                  <Route path="/search/:s?" element={<Searching />} />
+                  <Route path="/movie/:imdbID?" element={<Movie />} />
+                  <Route path="/my-list" element={<MyList />} />
                 </Routes>
               </div>
             </main>

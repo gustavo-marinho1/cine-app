@@ -6,8 +6,8 @@ export const SearchListing = ({items}: {items: ItemSearch[]}) => {
 
   const navigate = useNavigate();
 
-  const handleClick = (i: string) => {
-    navigate(`/movie?i=${i}`);
+  const handleClick = (imdbID: string) => {
+    navigate(`/movie/${imdbID}`);
   }
 
   return (

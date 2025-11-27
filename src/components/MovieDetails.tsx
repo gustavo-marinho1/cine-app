@@ -2,7 +2,7 @@ import type { MovieType } from "@/lib/movie";
 
 export const MovieDetails = ({data}: {data: MovieType}) => {
   return (
-    <div className="w-full flex flex-col gap-10 items-start text-left mt-10 bg-[rgba(0,0,0,0.25)] p-8 rounded-lg pt-11">
+    <div className="w-full flex flex-col gap-10 items-start text-left mt-10 bg-[rgba(0,0,0,0.25)] p-4 pt-7 sm:p-5 sm:pt-8 lg:p-6 lg:pt-9 rounded-lg">
       <Detail title="Plot" description={data.Plot} />
       <Detail title="Director" description={data.Director} />
       <Detail title="Writer" description={data.Writer} />

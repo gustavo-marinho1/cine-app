@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { SearchIcon } from "../assets/search-icon";
 import { useState } from "react";
 
-export const SearchForm = () => {
+export const FormSearch = () => {
 
   const navigate = useNavigate();
 
@@ -13,7 +13,7 @@ export const SearchForm = () => {
   }
 
   const handleSearch = () => {
-    if (search.length > 0) navigate(`/search?s=${search}`);
+    if (search.length > 0) navigate(`/search/${search}`);
   }
 
   return (

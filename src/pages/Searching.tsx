@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Pagination } from "../components/Pagination";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { type ItemSearch, searchMovies } from "../lib/search";
 import { SearchListing } from "../components/SearchListing";
 import { SearchEmpty } from "../components/SearchEmpty";
@@ -9,7 +9,7 @@ import { SearchLoading } from "../components/SearchLoading";
 export const Searching = () => {
 
   const navigate = useNavigate();
-  const params = new URLSearchParams(location.search);
+  const { s } = useParams();
   const [loading, setLoading] = useState<boolean>(false);
 
   const [items, setItems] = useState<ItemSearch[]>([]);
@@ -18,14 +18,13 @@ export const Searching = () => {
   const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {
-    const s = params.get("s");
     if (s) {
       setSearch(s);
     }
     else {
       navigate("/");
     }
-  }, []);
+  }, [s]);
 
   useEffect(() => {
     if (search.length > 0) getResults();
@@ -62,20 +61,20 @@ export const Searching = () => {
       {loading ? (
         <SearchLoading />
       ) : (
-        items.length > 0 ? (
-          <SearchListing items={items} />
+        (items.length > 0) ? (
+          <>
+            <SearchListing items={items} />
+
+            <Pagination
+              page={page}
+              totalPages={Math.ceil(total / 10)}
+              changePage={changePage}
+              disabled={loading}
+            />
+          </>
         ) : (
           <SearchEmpty />
         )
-      )}
-
-      {(items.length > 0) && (
-        <Pagination
-          page={page}
-          totalPages={Math.ceil(total / 10)}
-          changePage={changePage}
-          disabled={loading}
-        />
       )}
       
     </div>

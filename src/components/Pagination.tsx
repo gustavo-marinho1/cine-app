@@ -85,13 +85,13 @@ export const Pagination = ({page, totalPages, changePage, disabled}: Props) => {
 
 const Current = ({children}: { children: React.ReactNode }) => {
   return (
-    <div className="bg-[#414141] size-9 rounded-lg flex items-center justify-center">{children}</div>
+    <div className="bg-[#414141] text-white size-9 rounded-lg flex items-center justify-center">{children}</div>
   )
 }
 
 const Ellipsis = () => {
   return (
-    <div className="bg-[#212121] size-9 rounded-lg flex items-center justify-center">...</div>
+    <div className="bg-[#212121] text-white size-9 rounded-lg flex items-center justify-center">...</div>
   )
 }
 
