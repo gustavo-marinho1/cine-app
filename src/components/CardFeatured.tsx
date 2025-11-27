@@ -1,7 +1,6 @@
-export const CardFeatured = ({imageUrl, title, description}: {
+export const CardFeatured = ({imageUrl, title}: {
   imageUrl: string,
-  title: string,
-  description: string
+  title: string
 }) => {
 
   return (
@@ -17,7 +16,6 @@ export const CardFeatured = ({imageUrl, title, description}: {
 
       <div className="relative mt-auto flex flex-col justify-end p-6 text-white">
         <h3 className="text-2xl font-bold">{title}</h3>
-        <p className="text-gray-300 text-sm mt-1">{description}</p>
       </div>
 
     </div>
