@@ -36,7 +36,7 @@ API used for data: https://www.omdbapi.com/
 
 <div>
 	<h3>My List (mobile):</h3>
-	<img src="https://github.com/gustavo-marinho1/CineData/blob/main/src/assets/my-list-mobile.png" alt="CineData My List page" width="80%" />
+	<img src="https://github.com/gustavo-marinho1/CineData/blob/main/src/assets/my-list-mobile.png" alt="CineData My List page" width="30%" />
 </div>
 
 <div>
